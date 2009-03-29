@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About TheSmilingPenguin::CodePages
-permalink: about
+permalink: about.html
 ---
 
 h1. {{ page.title }}
