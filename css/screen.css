@@ -22,3 +22,15 @@ a:hover, #post a:hover { border-bottom: 2px solid #cc0000; }
 #codes strong, #post .meta  { color: lightgray; }
 #post { margin-left: auto; margin-right: auto; }
 #post pre { background-color:#444444; line-height: 1.5em; padding: 0 0.4em; }
+#seinfeld-calendar-iframe {
+  position: relative; margin: 145px auto 0; height: 190px; width: 260px;
+}
+#seinfeld-calendar { 
+  background: transparent url(/images/seinfeld_calendar_bg.png) no-repeat top left; 
+  height: 363px; 
+  width: 300px; 
+  text-align: center;
+  position: absolute;
+  top: 125px;
+  right: 100px;
+}

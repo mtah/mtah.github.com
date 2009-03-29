@@ -1,6 +1,7 @@
 ---
 layout: master
 ---
+  
   <div class="content" id="home">
     <h1>TheSmilingPenguin::CodePages</h1>
     <h2>Codes</h2>
@@ -11,26 +12,31 @@ layout: master
     <script type="text/javascript" src="/javascript/jquery.js" charset="utf-8"></script>
     <script type="text/javascript" src="/javascript/jquery.github.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
-    var login = 'mtah'
-    var target = '#codes'
-    $.githubUser(login, function(data) {
-      var repos = data.user.repositories
+    $(document).ready(function() {
+      var login = 'mtah'
+      var target = '#codes'
+      $.githubUser(login, function(data) {
+        var repos = data.user.repositories
 
-      repos.sort(function(a, b) {
-        return a.name > b.name
-      })
-      
-      $(target).html('')
-      $(repos).each(function() {
-        var homepage_url = this.homepage ? this.homepage : this.url
-        var tarball_url = this.url + '/tarball/master'
-        var zipball_url = this.url + '/zipball/master'
-        var clone_url = 'git://github.com/' + this.owner + '/' + this.name + '.git'
-        content = '<h3><a href="' + homepage_url + '">' + this.name + '<\/a><\/h3>'
-        content += '<p>' + this.description + '<\/p>'
-        content += '<p><strong>Download: <\/strong> <a href="' + tarball_url + '">.tar.gz<\/a> | <a href="' + zipball_url + '">.zip<\/a><br \/>'
-        content += '<strong>Clone URL: <\/strong> <a href="' + clone_url + '">' + clone_url + '<\/a><\/p>'
-        $(target).append(content)
+        repos.sort(function(a, b) {
+          return a.name > b.name
+        })
+        
+        $(target).html('')
+        $(repos).each(function() {
+          var homepage_url = this.homepage ? this.homepage : this.url
+          var tarball_url = this.url + '/tarball/master'
+          var zipball_url = this.url + '/zipball/master'
+          var clone_url = 'git://github.com/' + this.owner + '/' + this.name + '.git'
+          var content = '<h3><a href="' + homepage_url + '">' + this.name + '<\/a><\/h3>'
+          
+          if (this.description)
+            content += '<p>' + this.description + '<\/p>'
+            
+          content += '<p><strong>Download: <\/strong> <a href="' + tarball_url + '">.tar.gz<\/a> | <a href="' + zipball_url + '">.zip<\/a><br \/>'
+          content += '<strong>Clone URL: <\/strong> <a href="' + clone_url + '">' + clone_url + '<\/a><\/p>'
+          $(target).append(content)
+        })
       })
     })
     </script>
@@ -44,5 +50,4 @@ layout: master
     </ul>
     {% endif %}
   </div>
-
-
+  <div id="seinfeld-calendar"><iframe frameborder="0" scrolling="no" src="http://www.gmodules.com/ig/ifr?url=http://labs.metanation.com/gadget-about-nothing/legacy.xml&up_username=mtah&up_show_month_name=1&up_show_streaks=1&synd=open&w=260&h=190" name="seinfeld-calendar-iframe" id="seinfeld-calendar-iframe"></iframe></div>
