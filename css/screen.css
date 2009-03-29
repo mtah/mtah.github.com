@@ -1,5 +1,5 @@
 body { 
-  background: black url(/images/tux_peru.png) no-repeat fixed bottom right; 
+  background: black url(/images/tux_peru.png) no-repeat fixed bottom center; 
   color: white; 
   font-family: arial, helvetica, sans-serif; 
 }
@@ -23,14 +23,35 @@ a:hover, #post a:hover { border-bottom: 2px solid #cc0000; }
 #post { margin-left: auto; margin-right: auto; }
 #post pre { background-color:#444444; line-height: 1.5em; padding: 0 0.4em; }
 #seinfeld-calendar-iframe {
-  position: relative; margin: 145px auto 0; height: 190px; width: 260px;
+  position: relative; margin: 0 auto; height: 190px; width: 260px;
 }
+
+#seinfeld-calendar-wrapper {
+  position: absolute;
+  top: 150px;
+  right: 100px;
+  text-align: center;
+}
+
 #seinfeld-calendar { 
   background: transparent url(/images/seinfeld_calendar_bg.png) no-repeat top left; 
-  height: 363px; 
+  height: 315px; 
   width: 300px; 
   text-align: center;
+}
+
+#seinfeld-calendar-title {
+  position: relative;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+}
+
+#seinfeld-calendar-title span {
+  font-size: 1.5em;
+  font-weight: bold;
   position: absolute;
-  top: 125px;
-  right: 100px;
+  bottom: 0.5em;
+  left: 0;
+  width: 100%;
 }
