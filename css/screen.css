@@ -40,6 +40,10 @@ a:hover, #post a:hover { border-bottom: 2px solid #cc0000; }
   text-align: center;
 }
 
+#seinfeld-calendar-credits small {
+  font-size: x-small;
+}
+
 #seinfeld-calendar-title {
   position: relative;
   text-align: center;
