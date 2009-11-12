@@ -3,8 +3,7 @@ layout: master
 ---
   
   <div class="content" id="home">
-    <h1>TheSmilingPenguin::CodePages</h1>
-    <h2>Codes</h2>
+    <h1>Codes</h1>
     <div id="codes">
       <noscript><p>Here we would normally fetch a repository list from the GitHub JSON API, but you don't have JavaScript enabled.</p></noscript> 
     </div>
@@ -13,15 +12,6 @@ layout: master
     <script type="text/javascript" src="/javascript/jquery.github.js" charset="utf-8"></script>
     <script type="text/javascript" src="/javascript/seinfeld-badge.js" charset="utf-8"></script>
     <script type="text/javascript" src="/javascript/ready.js" charset="utf-8"></script>
-
-    {% if site.posts.size > 0 %}
-    <h2>Updates</h2>
-    <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-    {% endif %}
   </div>
   <div id="seinfeld-calendar-wrapper">
     <div id="seinfeld-calendar">
